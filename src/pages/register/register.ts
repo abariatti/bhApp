@@ -24,7 +24,7 @@ export class RegisterPage {
 
   submitAttempt: boolean = false;
 
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
     this.slideOneForm = formBuilder.group({
       firstName: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
       lastName: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],

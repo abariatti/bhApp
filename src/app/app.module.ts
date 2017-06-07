@@ -9,9 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
 import { RegisterPage } from '../pages/register/register';
+import { ScannerPage } from "../pages/scanner/scanner";
+import { CameraPage } from "../pages/camera/camera";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+// import { BarcodeScanner } from '@ionic-native/barcode-scanner'
+import { CameraPreview } from '@ionic-native/camera-preview';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     DetailPage,
-    RegisterPage
+    RegisterPage,
+    ScannerPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -35,11 +42,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     DetailPage,
-    RegisterPage
+    RegisterPage,
+    ScannerPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    // BarcodeScanner,
+    CameraPreview,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
