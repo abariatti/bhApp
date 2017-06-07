@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 /**
  * Generated class for the ScannerPage page.
@@ -15,17 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ScannerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams/*, private barcodeScanner: BarcodeScanner */) { 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner ) { 
   }
 
   scan() {
-    /*this.barcodeScanner.scan().then((barcodeData) => {
+    this.barcodeScanner.scan().then((barcodeData) => {
       // Success! Barcode data is here
       console.log(barcodeData);
+      alert(barcodeData);
     }, (err) => {
       // An error occurred
       console.log(err);
-    });*/
+    });
   }
 
 

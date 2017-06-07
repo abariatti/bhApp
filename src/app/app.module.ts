@@ -10,12 +10,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
 import { RegisterPage } from '../pages/register/register';
 import { ScannerPage } from "../pages/scanner/scanner";
-import { CameraPage } from "../pages/camera/camera";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-// import { BarcodeScanner } from '@ionic-native/barcode-scanner'
-import { CameraPreview } from '@ionic-native/camera-preview';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 
 @NgModule({
@@ -27,8 +25,7 @@ import { CameraPreview } from '@ionic-native/camera-preview';
     TabsPage,
     DetailPage,
     RegisterPage,
-    ScannerPage,
-    CameraPage
+    ScannerPage
   ],
   imports: [
     BrowserModule,
@@ -43,14 +40,12 @@ import { CameraPreview } from '@ionic-native/camera-preview';
     TabsPage,
     DetailPage,
     RegisterPage,
-    ScannerPage,
-    CameraPage
+    ScannerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    // BarcodeScanner,
-    CameraPreview,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
