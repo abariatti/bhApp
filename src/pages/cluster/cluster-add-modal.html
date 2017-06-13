@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Description
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Cluster Name</ion-label>
+        <ion-input formControlName="clusterName" type="text" [class.invalid]=""></ion-input>
+      </ion-item>
+
+      <!--<ion-item>
+        <ion-label floating>Members</ion-label>
+        <ion-input formControlName="members" type="text" [class.invalid]=""></ion-input>
+      </ion-item>-->
+      <ion-item>
+
+        <ion-buttons start>
+          <button ion-button (click)="add()">
+          <ion-icon name="check"></ion-icon>save
+          </button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+
+  </form>
+
+  <!--
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{character.image}}">
+        </ion-avatar>
+        <h2>{{character.name}}</h2>
+        <p>{{character.quote}}</p>
+      </ion-item>
+      <ion-item *ngFor="let item of character['items']">
+        {{item.title}}
+        <ion-note item-end>
+          {{item.note}}
+        </ion-note>
+      </ion-item>
+  </ion-list>
+  -->
+
+</ion-content>
