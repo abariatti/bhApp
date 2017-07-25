@@ -36,4 +36,5 @@ export class ClusterAddModalPage {
   dismiss() {
     this.viewCtrl.dismiss();
   }
+
 }
